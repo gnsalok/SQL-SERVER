@@ -1,1 +1,3 @@
 # SQL-SERVER
+#This repos help you to guys to execute the logical queries which are mostly used all the time 
+and this contains the step by step as well as the Interview Question section as well...
