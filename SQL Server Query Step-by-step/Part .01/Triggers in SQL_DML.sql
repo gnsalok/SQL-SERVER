@@ -1,3 +1,6 @@
+
+Use Sample
+
 SELECT * FROM tblEmployee
 SELECT * FROM tblEmployeeAudit
 
@@ -25,11 +28,10 @@ CREATE TABLE tblEmployeeAudit
 
 --CREATING A TRIGGER
 
-ALTER TRIGGER tr_tblEMployee_ForInsert
+Create TRIGGER tr_tblEMployee_ForInsert
 ON tblEmployee
 FOR INSERT			--TABLE FOR SPECIFIC CONDITIONS ONLY
 AS
-
 BEGIN
 SELECT * FROM inserted
 
@@ -57,5 +59,7 @@ BEGIN
  insert into tblEmployeeAudit 
  values('An existing employee with Id  = ' + Cast(@Id as nvarchar(5)) + ' is deleted at ' + Cast(Getdate() as nvarchar(20)))
 END
+
+
 
 DELETE FROM tblEmployee  WHERE ID = 9
